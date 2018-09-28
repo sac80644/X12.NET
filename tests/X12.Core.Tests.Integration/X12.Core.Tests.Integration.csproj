@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\X12.Core.Parsing\X12.Core.Parsing.csproj" />
+    <ProjectReference Include="..\..\src\X12.Core.Shared\X12.Core.Shared.csproj" />
+    <ProjectReference Include="..\..\src\X12.Core.Specifications\X12.Core.Specifications.csproj" />
+    <ProjectReference Include="..\..\src\X12.Core.Sql\X12.Core.Sql.csproj" />
+  </ItemGroup>
+
+</Project>

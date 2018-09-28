@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\X12.Core.Parsing\X12.Core.Parsing.csproj" />
+    <ProjectReference Include="..\X12.Core.Shared\X12.Core.Shared.csproj" />
+    <ProjectReference Include="..\X12.Core.Specifications\X12.Core.Specifications.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>

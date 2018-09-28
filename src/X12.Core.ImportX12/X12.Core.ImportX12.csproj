@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\X12.Core.Parsing\X12.Core.Parsing.csproj" />
+    <ProjectReference Include="..\X12.Core.Shared\X12.Core.Shared.csproj" />
+    <ProjectReference Include="..\X12.Core.Specifications\X12.Core.Specifications.csproj" />
+    <ProjectReference Include="..\X12.Core.Sql\X12.Core.Sql.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,100 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Claims\TestData\Images\ADAJ400_Red.gif" />
+    <None Remove="Claims\TestData\Images\HCFA1500_Red.gif" />
+    <None Remove="Claims\TestData\Images\UB04_Red.gif" />
+    <None Remove="Claims\TestData\InstitutionalClaim4010.txt" />
+    <None Remove="Claims\TestData\InstitutionalClaim4010.xml" />
+    <None Remove="Claims\TestData\InstitutionalClaim4010_ClaimModel.xml" />
+    <None Remove="Claims\TestData\InstitutionalClaim5010.txt" />
+    <None Remove="Claims\TestData\InstitutionalClaim5010.xml" />
+    <None Remove="Claims\TestData\InstitutionalClaim5010_ClaimModel.xml" />
+    <None Remove="Claims\TestData\ProfessionalClaim1.txt" />
+    <None Remove="Claims\TestData\ProfessionalClaim1_ClaimModel.xml" />
+    <None Remove="Claims\TestData\UB04ClaimModel1.xml" />
+    <None Remove="Eligibility\TestData\_271\_4010\Example1_DHHS.txt" />
+    <None Remove="Eligibility\TestData\_271\_4010\Example2_TMHP.txt" />
+    <None Remove="Eligibility\TestData\_271\_4010\Example3_CMS-HETS.xml" />
+    <None Remove="Eligibility\TestData\_271\_4010\Example3_CMS_HETS.htm" />
+    <None Remove="Eligibility\TestData\_271\_4010\Example3_CMS_HETS.txt" />
+    <None Remove="Eligibility\TestData\_271\_4010\Example3_CMS_HETS_Model.xml" />
+    <None Remove="Eligibility\TestData\_271\_5010\Example_3_1_2.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\Example_3_1_2.xml" />
+    <None Remove="Eligibility\TestData\_271\_5010\Example_3_1_3.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\Example_3_2_2.htm" />
+    <None Remove="Eligibility\TestData\_271\_5010\Example_3_2_2.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\Example_3_2_2.xml" />
+    <None Remove="Eligibility\TestData\_271\_5010\Example_3_2_2_Model.xml" />
+    <None Remove="Eligibility\TestData\_271\_5010\ValidationForDependentBenefitInfo.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\ValidationForDependentName.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\ValidationForReceiverName.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\ValidationForSource.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\ValidationForSourceName.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\ValidationForSubscriberBenefitInfo.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\ValidationForSubscriberName.txt" />
+    <None Remove="Eligibility\TestData\_271\_5010\ValidationOnAll.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Claims\TestData\Images\ADAJ400_Red.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Claims\TestData\Images\HCFA1500_Red.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Claims\TestData\Images\UB04_Red.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Claims\TestData\InstitutionalClaim4010.xml" />
+    <Content Include="Claims\TestData\InstitutionalClaim4010_ClaimModel.xml" />
+    <Content Include="Claims\TestData\InstitutionalClaim5010.xml" />
+    <Content Include="Claims\TestData\InstitutionalClaim5010_ClaimModel.xml" />
+    <Content Include="Claims\TestData\ProfessionalClaim1_ClaimModel.xml" />
+    <Content Include="Eligibility\TestData\_271\_4010\Example3_CMS-HETS.xml" />
+    <Content Include="Eligibility\TestData\_271\_4010\Example3_CMS_HETS.htm" />
+    <Content Include="Eligibility\TestData\_271\_4010\Example3_CMS_HETS_Model.xml" />
+    <Content Include="Eligibility\TestData\_271\_5010\Example_3_1_2.xml" />
+    <Content Include="Eligibility\TestData\_271\_5010\Example_3_2_2.htm" />
+    <Content Include="Eligibility\TestData\_271\_5010\Example_3_2_2.xml" />
+    <Content Include="Eligibility\TestData\_271\_5010\Example_3_2_2_Model.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Claims\TestData\InstitutionalClaim4010.txt" />
+    <EmbeddedResource Include="Claims\TestData\InstitutionalClaim5010.txt" />
+    <EmbeddedResource Include="Claims\TestData\ProfessionalClaim1.txt" />
+    <EmbeddedResource Include="Claims\TestData\UB04ClaimModel1.xml" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_4010\Example1_DHHS.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_4010\Example2_TMHP.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_4010\Example3_CMS_HETS.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\Example_3_1_2.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\Example_3_1_3.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\Example_3_2_2.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\ValidationForDependentBenefitInfo.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\ValidationForDependentName.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\ValidationForReceiverName.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\ValidationForSource.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\ValidationForSourceName.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\ValidationForSubscriberBenefitInfo.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\ValidationForSubscriberName.txt" />
+    <EmbeddedResource Include="Eligibility\TestData\_271\_5010\ValidationOnAll.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\X12.Core.Parsing\X12.Core.Parsing.csproj" />
+    <ProjectReference Include="..\..\src\X12.Core.Shared\X12.Core.Shared.csproj" />
+    <ProjectReference Include="..\..\src\X12.Core.Hipaa\X12.Core.Hipaa.csproj" />
+  </ItemGroup>
+
+</Project>

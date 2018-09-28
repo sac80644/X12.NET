@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\X12.Core.Shared\X12.Core.Shared.csproj" />
+    <ProjectReference Include="..\X12.Core.Transformations\X12.Core.Transformations.csproj" />
+  </ItemGroup>
+
+</Project>

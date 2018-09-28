@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ADAJ400_Red.gif" />
+    <None Remove="HCFA1500_Red.gif" />
+    <None Remove="UB04_Red.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ADAJ400_Red.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HCFA1500_Red.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UB04_Red.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fonet" Version="1.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\X12.Core.Parsing\X12.Core.Parsing.csproj" />
+    <ProjectReference Include="..\X12.Core.Hipaa\X12.Core.Hipaa.csproj" />
+  </ItemGroup>
+
+</Project>
