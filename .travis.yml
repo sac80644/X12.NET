@@ -5,8 +5,7 @@ dotnet: 2.1.4
 env:
   - PACKAGE_VERSION="5.0.*"
 install:
-  - nuget restore X12.sln
-  - nuget install NUnit.Runners -Version 3.9.0 -OutputDirectory testrunner
+  - dotnet restore
 script:
   - dotnet build
   - dotnet test ./tests/X12.Core.Tests.Unit/bin/Release/netcoreapp2.0/X12.Core.Tests.Unit.dll
