@@ -36,13 +36,6 @@
             {
                 try
                 {
-#if DEBUG
-                    var stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
-                    var parser = new X12Parser();
-                    var interchange = parser.ParseMultiple(stream).First();
-                    File.WriteAllText(filename + ".dat", interchange.SerializeToX12(true));
-                    stream.Close();
-#endif           
                     DateTime start = DateTime.Now;
                     var inputFilestream = new FileStream(filename, FileMode.Open, FileAccess.Read);
 
