@@ -72,7 +72,7 @@
         {
             var xml = interchange.Serialize();
 
-            var transformStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Claims.Services.Xsl.X12-837-To-ClaimDocument.xslt");
+            var transformStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Claims.Services.Xsl.X12-837-To-ClaimDocument.xslt");
 
             var transform = new XslCompiledTransform();
             if (transformStream != null)

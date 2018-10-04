@@ -182,10 +182,7 @@ IEA*1*000000031~
              */
             HL1SourceLoop.NM109_IdCode = "842610001"; //Code defining a party or other value lookup from external code list
             
-            Debug.WriteLine("HL1 level:");
-            Debug.WriteLine(HL1InformationSourceLevel.SerializeToX12(false));
-            Debug.WriteLine("HL*1**20*1~NM1*PR*2*ABC BILLING SERVICE*****PI*842610001~");
-            Assert.AreEqual("HL*1**20*1~NM1*PR*2*ABC BILLING SERVICE*****PI*842610001~",HL1InformationSourceLevel.SerializeToX12(false));
+            Assert.AreEqual("HL*1**20*1~NM1*PR*2*ABC BILLING SERVICE*****PI*842610001~", HL1InformationSourceLevel.SerializeToX12(false));
             #endregion
                  
             #region HL2 Level - Information Receiver - Loop 2100B
@@ -200,10 +197,7 @@ IEA*1*000000031~
             HL2Info.NM107_NameSuffix = string.Empty;
             HL2Info.NM108_IdCodeQualifier = "SV"; //code describing what the NM109 is
             HL2Info.NM109_IdCode = "2000035";
-
-            Debug.WriteLine("HL2 Level:");
-            Debug.WriteLine(HL2SourceLoop.SerializeToX12(false));
-            Debug.WriteLine("HL*2*1*21*1~NM1*1P*2*BONE AND JOINT CLINIC*****SV*2000035~");
+            
             Assert.AreEqual("HL*2*1*21*1~NM1*1P*2*BONE AND JOINT CLINIC*****SV*2000035~", HL2SourceLoop.SerializeToX12(false));
             #endregion
                      

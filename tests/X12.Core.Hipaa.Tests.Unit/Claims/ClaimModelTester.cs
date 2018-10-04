@@ -36,7 +36,7 @@
         {
             var service = new ClaimTransformationService();
 
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim4010.txt");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim4010.txt");
 
             var document = service.Transform837ToClaimDocument(stream);
             string xml = document.Serialize();
@@ -117,7 +117,7 @@
         {
             var service = new ClaimTransformationService();
 
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim5010.txt");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim5010.txt");
 
             var document = service.Transform837ToClaimDocument(stream);
 
@@ -342,7 +342,7 @@
 
             var service = new ClaimTransformationService();
 
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim5010.txt");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim5010.txt");
 
             var document = service.Transform837ToClaimDocument(stream);
 

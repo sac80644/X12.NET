@@ -199,39 +199,62 @@ IEA*1*000000031~";
         [Test]
         public void ElementValidationTwoArgsTester()
         {
+            // arrange
+            var errorMessage = string.Join(
+                Environment.NewLine,
+                "Element NM1 cannot contain the value 'AB~CD' with the segment terminator.",
+                "Parameter name: NM1");
             try
             {
+                // act
                 throw new ElementValidationException("Element {0} cannot contain the value '{1}' with the segment terminator.", "NM1", "AB~CD");
             }
             catch (ElementValidationException exc)
             {
-                Assert.AreEqual("Element NM1 cannot contain the value 'AB~CD' with the segment terminator.\nParameter name: NM1", exc.Message);
+                // assert
+                Assert.AreEqual(errorMessage, exc.Message);
             }
         }
 
         [Test]
         public void ElementValidationThreeArgsTester()
         {
+            // arrange
+            var errorMessage = string.Join(
+                Environment.NewLine,
+                "Element NM1 cannot contain the value 'AB~CD' with the segment terminator ~.",
+                "Parameter name: NM1");
+
             try
             {
+                // act
                 throw new ElementValidationException("Element {0} cannot contain the value '{1}' with the segment terminator {2}.", "NM1", "AB~CD", '~');
             }
             catch (ElementValidationException exc)
             {
-                Assert.AreEqual("Element NM1 cannot contain the value 'AB~CD' with the segment terminator ~.\nParameter name: NM1", exc.Message);
+                // assert
+                Assert.AreEqual(errorMessage, exc.Message);
             }
         }
 
         [Test]
         public void ElementValidationFiveArgsTester()
         {
+            // arrange
+            var errorMessage = string.Join(
+                Environment.NewLine,
+                "Element NM1 cannot contain the value 'AB~CD' with the segment terminator ~. Use a value without delimiters ~ * or :.",
+                "Parameter name: NM1");
+            
             try
             {
+                // act
                 throw new ElementValidationException("Element {0} cannot contain the value '{1}' with the segment terminator {2}. Use a value without delimiters {2} {3} or {4}.", "NM1", "AB~CD", '~', '*', ':');
             }
             catch (ElementValidationException exc)
             {
-                Assert.AreEqual("Element NM1 cannot contain the value 'AB~CD' with the segment terminator ~. Use a value without delimiters ~ * or :.\nParameter name: NM1", exc.Message);
+                // assert
+                Assert.AreEqual(errorMessage, exc.Message);
             }
         }
 

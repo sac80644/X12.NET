@@ -94,43 +94,43 @@
         [Test]
         public void Transform4010ToModel1Test()
         {
-            var responses = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._4010.Example1_DHHS.txt");
+            var responses = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._4010.Example1_DHHS.txt");
         }
 
         [Test]
         public void Transform4010ToModel2Test()
         {
-            var responses = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._4010.Example2_TMHP.txt");
+            var responses = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._4010.Example2_TMHP.txt");
         }
 
         [Test]
         public void Transform4010ToModel3Test()
         {
-            var responses = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._4010.Example3_CMS_HETS.txt");
+            var responses = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._4010.Example3_CMS_HETS.txt");
         }
         
         [Test]
         public void Transform5010ToModel1Test()
         {
-            var responses = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.Example_3_1_2.txt");
+            var responses = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.Example_3_1_2.txt");
         }
 
         [Test]
         public void Transform5010ToModel2Test()
         {
-            var responses = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.Example_3_2_2.txt");
+            var responses = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.Example_3_2_2.txt");
         }
 
         [Test]
         public void Transform5010ToModel3Test()
         {
-            var responses = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.Example_3_1_3.txt");
+            var responses = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.Example_3_1_3.txt");
         }
 
         [Test]
         public void ValidationOnAll_WhenTransform5010ToModelTest_ShouldHaveAllRequestValidations()
         {
-            var response = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationOnAll.txt");
+            var response = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationOnAll.txt");
             
             Assert.AreEqual(response.RequestValidations.Count, 2);
             Assert.AreEqual(response.EligibilityBenefitResponses[0].Dependent.RequestValidations.Count, 1);
@@ -143,7 +143,7 @@
         [Test]
         public void ValidationForDependentBenefitInfo_WhenTransform5010ToModelTest_ShouldHaveRequestValidations()
         {
-            var response = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForDependentBenefitInfo.txt");
+            var response = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForDependentBenefitInfo.txt");
             
             Assert.AreEqual(response.EligibilityBenefitResponses[0].BenefitInfos[0].RequestValidations.Count, 1);
         }
@@ -151,7 +151,7 @@
         [Test]
         public void ValidationForDependentName_WhenTransform5010ToModelTest_ShouldHaveRequestValidations()
         {
-            var response = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForDependentName.txt");
+            var response = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForDependentName.txt");
             
             Assert.AreEqual(response.EligibilityBenefitResponses[0].Dependent.RequestValidations.Count, 1);
         }
@@ -159,7 +159,7 @@
         [Test]
         public void ValidationForSource_WhenTransform5010ToModelTest_ShouldHaveRequestValidations()
         {
-            var response = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForSource.txt");
+            var response = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForSource.txt");
             
             Assert.AreEqual(response.RequestValidations.Count, 1);
         }
@@ -167,7 +167,7 @@
         [Test]
         public void ValidationForSourceName_WhenTransform5010ToModelTest_ShouldHaveRequestValidations()
         {
-            var response = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForSourceName.txt");
+            var response = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForSourceName.txt");
             
             Assert.AreEqual(response.EligibilityBenefitResponses[0].Source.RequestValidations.Count, 1);
         }
@@ -175,7 +175,7 @@
         [Test]
         public void ValidationForSubscriberBenefitInfo_WhenTransform5010ToModelTest_ShouldHaveRequestValidations()
         {
-            var response = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForSubscriberBenefitInfo.txt");
+            var response = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForSubscriberBenefitInfo.txt");
             
             Assert.AreEqual(response.EligibilityBenefitResponses[0].BenefitInfos[0].RequestValidations.Count, 2);
         }
@@ -183,7 +183,7 @@
         [Test]
         public void ValidationForSubscriberName_WhenTransform5010ToModelTest_ShouldHaveRequestValidations()
         {
-            var response = this.TransformToModel("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForSubscriberName.txt");
+            var response = this.TransformToModel("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.ValidationForSubscriberName.txt");
             
             Assert.AreEqual(response.EligibilityBenefitResponses[0].Subscriber.RequestValidations.Count, 2);
         }
@@ -191,13 +191,13 @@
         [Test]
         public void Transform4010Model3ToHtmlTest()
         {
-            string html = this.TransformModelToHtml("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._4010.Example3_CMS_HETS.txt");
+            string html = this.TransformModelToHtml("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._4010.Example3_CMS_HETS.txt");
         }
 
         [Test]
         public void Transform5010Model2ToHtmlTest()
         {
-            string html = this.TransformModelToHtml("X12.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.Example_3_2_2.txt");
+            string html = this.TransformModelToHtml("X12.Core.Hipaa.Tests.Unit.Eligibility.TestData._271._5010.Example_3_2_2.txt");
         }
 
         private EligibilityBenefitDocument TransformToModel(string resourcePath)

@@ -36,7 +36,7 @@
         /// <param name="versionCode">Specification version code</param>
         /// <param name="transactionSetCode">Transaction set code</param>
         /// <returns>Transaction specification which matches the codes provided</returns>
-        /// <exception cref="System.NotSupportedException">Thrown if the codes provided do not map to a known specification</exception>
+        /// <exception cref="NotSupportedException">Thrown if the codes provided do not map to a known specification</exception>
         public virtual TransactionSpecification FindTransactionSpec(string functionalCode, string versionCode, string transactionSetCode)
         {
             switch (transactionSetCode)
@@ -79,13 +79,13 @@
                 case "999":
                     return GetSpecification("999-5010");
                 default:
-                    Stream specStream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"X12.Specifications.Resource.Ansi-{transactionSetCode}-4010Specification.xml");
+                    Stream specStream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"X12.Core.Specifications.Resource.Ansi-{transactionSetCode}-4010Specification.xml");
                     if (specStream != null)
                     {
                         return GetSpecification(transactionSetCode + "-4010");
                     }
 
-                    specStream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"X12.Specifications.Resource.Ansi-{transactionSetCode}-Specification.xml");
+                    specStream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"X12.Core.Specifications.Resource.Ansi-{transactionSetCode}-Specification.xml");
                     if (specStream != null)
                     {
                         return GetSpecification(transactionSetCode + "-");
@@ -129,7 +129,7 @@
                 key =>
                     {
                         Stream specStream = Assembly.GetExecutingAssembly()
-                            .GetManifestResourceStream($"X12.Specifications.Resource.Ansi-{key}Specification.xml");
+                            .GetManifestResourceStream($"X12.Core.Specifications.Resource.Ansi-{key}Specification.xml");
                         return TransactionSpecification.Deserialize(new StreamReader(specStream).ReadToEnd());
                     });
         }
@@ -141,7 +141,7 @@
                 if (_4010Specification == null)
                 {
                     Stream specStream = Assembly.GetExecutingAssembly()
-                        .GetManifestResourceStream("X12.Specifications.Resource.Ansi-4010Specification.xml");
+                        .GetManifestResourceStream("X12.Core.Specifications.Resource.Ansi-4010Specification.xml");
                     var reader = new StreamReader(specStream);
                     SegmentSet set = SegmentSet.Deserialize(reader.ReadToEnd());
                     _4010Specification = new Dictionary<string, SegmentSpecification>();
@@ -176,7 +176,7 @@
                 if (_5010Specification == null)
                 {
                     Stream specStream = Assembly.GetExecutingAssembly()
-                        .GetManifestResourceStream("X12.Specifications.Resource.Ansi-5010Specification.xml");
+                        .GetManifestResourceStream("X12.Core.Specifications.Resource.Ansi-5010Specification.xml");
                     var reader = new StreamReader(specStream);
                     SegmentSet set = SegmentSet.Deserialize(reader.ReadToEnd());
                     _5010Specification = new Dictionary<string, SegmentSpecification>();

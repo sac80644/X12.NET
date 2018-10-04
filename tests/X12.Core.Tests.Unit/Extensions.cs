@@ -15,7 +15,15 @@
         /// <returns>Stream for the EDI file found at the resource path</returns>
         public static Stream GetEdi(string resourcePath)
         {
-            return Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Tests.Unit.Parsing._SampleEdiFiles." + resourcePath);
+            Stream resourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Tests.Unit.Parsing._SampleEdiFiles." + resourcePath);
+            if (resourceStream == null)
+            {
+                throw new System.ArgumentNullException(
+                    nameof(resourcePath),
+                    $"X12.Core.Tests.Unit.Parsing._SampleEdiFiles.{resourcePath} is not valid or cannot be found");
+            }
+
+            return resourceStream;
         }
 
         /// <summary>

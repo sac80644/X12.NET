@@ -1,4 +1,4 @@
-﻿namespace X12.Hipaa.Tests.Unit.Claims
+﻿namespace X12.Core.Hipaa.Tests.Unit.Claims
 {
     using System.IO;
     using System.Linq;
@@ -18,7 +18,7 @@
     {
         private static readonly string TestDirectory = @"C:\Temp\Pdfs";
 
-        private static readonly string TestImageDirectory = @"..\..\..\tests\X12.Hipaa.Tests.Unit\Claims\TestData\Images\";
+        private static readonly string TestImageDirectory = @"..\..\..\tests\X12.Core.Hipaa.Tests.Unit\Claims\TestData\Images\";
 
         /// <summary>
         /// Initializes the test being performed by ensuring the testing directory has been created and is empty.
@@ -42,7 +42,7 @@
         [Test]
         public void X12ToClaimModelTest()
         {
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Tests.Unit.Claims.TestData.ProfessionalClaim1.txt");              
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Tests.Unit.Claims.TestData.ProfessionalClaim1.txt");              
 
              var service = new ProfessionalClaimToHcfa1500FormTransformation(string.Empty);
 
@@ -66,7 +66,7 @@
         [Test]
         public void X12ToHcfaPdfTest()
         {
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Tests.Unit.Claims.TestData.ProfessionalClaim1.txt");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Tests.Unit.Claims.TestData.ProfessionalClaim1.txt");
 
             // new up a ClaimTransformationService object
             var service = new ClaimFormTransformationService(
@@ -87,7 +87,7 @@
         [Test]
         public void X12ToUbPdfLayoutTest()
         {
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim5010.txt");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim5010.txt");
             
             var transformation = new InstitutionalClaimToUb04ClaimFormTransformation($"{TestImageDirectory}\\UB04_Red.gif");
                 
@@ -107,7 +107,7 @@
         [Test]
         public void X12ToUbPdfTest()
         {
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim5010.txt");
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Tests.Unit.Claims.TestData.InstitutionalClaim5010.txt");
 
             var transformation = new InstitutionalClaimToUb04ClaimFormTransformation($"{TestImageDirectory}\\UB04_Red.gif");
             

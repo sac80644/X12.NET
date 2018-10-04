@@ -15,7 +15,7 @@
     using X12.Core.Transformations;
 
     /// <summary>
-    /// Summary description for ParsingTester
+    /// Tests X12 Parsing features
     /// </summary>
     [TestFixture]
     public class ParsingTester

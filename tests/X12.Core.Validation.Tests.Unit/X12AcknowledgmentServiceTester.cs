@@ -32,7 +32,7 @@
 
         private Stream GetEdi(string filename)
         {
-            return Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Validation.Tests.Unit.Data." + filename);
+            return Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Validation.Tests.Unit.Data." + filename);
         }
     }
 }

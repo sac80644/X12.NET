@@ -28,7 +28,7 @@
             foreach (var interchange in interchanges)
             {
                 string xml = interchange.Serialize();
-                Stream transformStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Eligibility.Services.Xsl.X12-271-To-BenefitResponse.xslt");
+                Stream transformStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Eligibility.Services.Xsl.X12-271-To-BenefitResponse.xslt");
                 var transform = new XslCompiledTransform();
 
                 if (transformStream != null)
@@ -58,7 +58,7 @@
         public string TransformBenefitResponseToHtml(EligibilityBenefitResponse response)
         {
             string xml = response.Serialize();
-            Stream transformStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Eligibility.Services.Xsl.BenefitResponse-To-Html.xslt");
+            Stream transformStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Eligibility.Services.Xsl.BenefitResponse-To-Html.xslt");
             var transform = new XslCompiledTransform();
 
             if (transformStream != null)

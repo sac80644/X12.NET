@@ -94,7 +94,7 @@
             }
 
             string xml = form.Serialize();
-            Stream transformStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Hipaa.Claims.Services.Xsl.FormDocument-To-FoXml.xslt");
+            Stream transformStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Hipaa.Claims.Services.Xsl.FormDocument-To-FoXml.xslt");
 
             var transform = new XslCompiledTransform();
             if (transformStream != null)

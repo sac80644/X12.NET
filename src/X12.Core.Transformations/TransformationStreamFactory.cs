@@ -16,7 +16,7 @@
         {
             return Assembly
                     .GetExecutingAssembly()
-                    .GetManifestResourceStream("X12.Transformations.Resources.X12-XML-to-HTML.xslt");
+                    .GetManifestResourceStream("X12.Core.Transformations.Resources.X12-XML-to-HTML.xslt");
         }
 
         /// <summary>
@@ -27,7 +27,7 @@
         {
             return Assembly
                     .GetExecutingAssembly()
-                    .GetManifestResourceStream("X12.Transformations.Resources.X12-XML-to-X12.xslt");
+                    .GetManifestResourceStream("X12.Core.Transformations.Resources.X12-XML-to-X12.xslt");
         }
     }
 }
