@@ -70,7 +70,7 @@
         /// <param name="resourcePath">File path for a sample EDI file to test</param>
         [Test]
         public void ParseAndUnparse(
-            [ValueSource(typeof(ResourcePathManager), nameof(ResourcePathManager))]
+            [ValueSource(typeof(ResourcePathManager), nameof(ResourcePathManager.ResourcePaths))]
             string resourcePath)
         {
             Stream stream = GetEdi(resourcePath);
@@ -96,7 +96,7 @@
         /// <param name="resourcePath">File path for a sample EDI file to test</param>
         [Test]
         public void ParseAndTransformToX12(
-            [ValueSource(typeof(ResourcePathManager), nameof(ResourcePathManager))]
+            [ValueSource(typeof(ResourcePathManager), nameof(ResourcePathManager.ResourcePaths))]
             string resourcePath)
         {
             if (!resourcePath.Contains("_0x1D"))
@@ -127,7 +127,7 @@
         /// <param name="resourcePath">File path for a sample EDI file to test</param>
         [Test]
         public void ParseModifyAndTransformBackToX12(
-            [ValueSource(typeof(ResourcePathManager), nameof(ResourcePathManager))]
+            [ValueSource(typeof(ResourcePathManager), nameof(ResourcePathManager.ResourcePaths))]
             string resourcePath)
         {
             var stream = GetEdi("INS._270._4010.Example1_DHHS.txt");
@@ -163,7 +163,7 @@
         /// <param name="resourcePath">File path for a sample EDI file to test</param>
         [Test]
         public void ParseToHtml(
-            [ValueSource(typeof(ResourcePathManager), nameof(ResourcePathManager))]
+            [ValueSource(typeof(ResourcePathManager), nameof(ResourcePathManager.ResourcePaths))]
             string resourcePath)
         {
             // arrange
@@ -184,7 +184,7 @@
         public void ParseUnicodeFile()
         {
             // arrange
-            var fs = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Tests.Unit.Parsing._SampleEdiFiles.INS._837P._5010.UnicodeExample.txt");
+            var fs = Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Tests.Unit.Parsing._SampleEdiFiles.INS._837P._5010.UnicodeExample.txt");
             var parser = new X12Parser();
 
             // act - assert
@@ -193,7 +193,7 @@
 
         private static Stream GetEdi(string resourcePath)
         {
-            return Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Tests.Unit.Parsing._SampleEdiFiles." + resourcePath);
+            return Assembly.GetExecutingAssembly().GetManifestResourceStream("X12.Core.Tests.Unit.Parsing._SampleEdiFiles." + resourcePath);
         }
 
         /// <summary>

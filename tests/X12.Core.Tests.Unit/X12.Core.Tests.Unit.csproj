@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Rendering\**" />
+    <EmbeddedResource Remove="Rendering\**" />
+    <None Remove="Rendering\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Flattening\820-XML-to-csv.xslt" />
     <None Remove="Flattening\837-XML-to-claim-level-csv.xslt" />
     <None Remove="Flattening\XSLTFile1.xslt" />
@@ -327,10 +333,6 @@
     <EmbeddedResource Include="Parsing\_SampleEdiFiles\TRS\_417\417TrainSummary.txt" />
     <EmbeddedResource Include="Parsing\_SampleEdiFiles\WAR\_940\simplot.txt" />
     <EmbeddedResource Include="Parsing\_SampleEdiFiles\WAR\_945\inter-americanproducts.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Rendering\" />
   </ItemGroup>
 
   <ItemGroup>
