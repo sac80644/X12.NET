@@ -1,5 +1,6 @@
 ﻿namespace X12.Core.Shared.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
@@ -152,18 +153,18 @@
             foreach (Segment segment in this.Segments.Where(seg => !this.TrailerSegmentIds.Contains(seg.SegmentId)))
             {
                 sb.Append(addWhitespace
-                              ? segment.ToX12String(addWhitespace).Replace("\r\n", "\r\n  ")
+                              ? segment.ToX12String(addWhitespace).Replace(Environment.NewLine, $"{Environment.NewLine}  ")
                               : segment.ToX12String(addWhitespace));
             }
 
             sb.Append(addWhitespace
-                          ? this.SerializeBodyToX12(addWhitespace).Replace("\r\n", "\r\n  ")
+                          ? this.SerializeBodyToX12(addWhitespace).Replace(Environment.NewLine, $"{Environment.NewLine}  ")
                           : this.SerializeBodyToX12(addWhitespace));
 
             foreach (Segment segment in this.Segments.Where(seg => this.TrailerSegmentIds.Contains(seg.SegmentId)))
             {
                 sb.Append(addWhitespace
-                              ? segment.ToX12String(addWhitespace).Replace("\r\n", "\r\n  ")
+                              ? segment.ToX12String(addWhitespace).Replace(Environment.NewLine, $"{Environment.NewLine}  ")
                               : segment.ToX12String(addWhitespace));
             }
 
@@ -172,7 +173,7 @@
                 var wrapperSegments = new[] { "SE", "GE", "IEA" };
                 if (addWhitespace && !wrapperSegments.Contains(segment.SegmentId))
                 {
-                    sb.Append(segment.ToX12String(addWhitespace).Replace("\r\n", "\r\n  "));
+                    sb.Append(segment.ToX12String(addWhitespace).Replace(Environment.NewLine, $"{Environment.NewLine}  "));
                 }
                 else
                 {
