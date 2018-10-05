@@ -80,7 +80,7 @@
             parser.ParserWarning += this.Parser_ParserWarning;
             List<Interchange> interchanges = parser.ParseMultiple(stream);
 
-            StringBuilder x12 = new StringBuilder();
+            var x12 = new StringBuilder();
             foreach (var interchange in interchanges)
             {
                 x12.AppendLine(interchange.SerializeToX12(true));
